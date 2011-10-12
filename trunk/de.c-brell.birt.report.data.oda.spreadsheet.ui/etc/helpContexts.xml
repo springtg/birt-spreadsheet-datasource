@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.contexts"?>
+<contexts>
+    <context id="spreadsheetColumnEditor" >
+        <description>How to create/modify Spreadsheet Columns</description>
+        <topic label="Spreadsheet Columns" href="help/columnEditor.xhtml"/>
+    </context>
+</contexts>
