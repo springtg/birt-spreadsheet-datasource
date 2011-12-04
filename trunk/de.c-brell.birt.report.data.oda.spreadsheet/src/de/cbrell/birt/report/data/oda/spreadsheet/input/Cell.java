@@ -41,7 +41,7 @@ public interface Cell {
 	public CellType getCellType();
 
 	/**
-	 * @return content of the cell having corrsponsing java data type
+	 * @return content of the cell having corresponding java data type
 	 */
 	public Object getValue();
 	
