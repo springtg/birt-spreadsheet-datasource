@@ -118,15 +118,20 @@ public class SpreadsheetConnection implements IConnection
 		}
 
 
+		String pathSeparator = System.getProperty("file.separator");
+		if(pathSeparator==null) {
+			pathSeparator = "/";
+		}
+		
 		String filename = properties.getProperty(SpreadsheetConstants.SPREADSHEET_FILENAME_PROPERTY);
 		boolean failed = true;
 		if(ctx.getHomeFolder()!=null) {
 			dirName = ctx.getHomeFolder();
-			failed = !tryFile(dirName+"\\"+filename);
+			failed = !tryFile(dirName+pathSeparator+filename);
 		}
 		if(this.stream==null && ctx.isDirectAccessAllowed()) {
 			dirName = properties.getProperty(SpreadsheetConstants.SPREADSHEET_DIRNAME_PROPERTY);
-			failed = !tryFile(dirName+"\\"+filename);
+			failed = !tryFile(dirName+pathSeparator+filename);
 		}
 		if(failed) {
 			throw new OdaException("File not found");
@@ -172,7 +177,6 @@ public class SpreadsheetConnection implements IConnection
 	}
 
 	public void setLocale(ULocale locale) throws OdaException {
-		//this.locale = locale;
 	}
 
 	public Spreadsheet getUnderlyingSpreadsheet() {
