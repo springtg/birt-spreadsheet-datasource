@@ -76,7 +76,6 @@ public class SpreadsheetDataSourceHelper { //extends Composite {
 			@Override
 			public void widgetSelected(SelectionEvent arg0) {
 				DirectoryDialog dialog = new DirectoryDialog(spreadsheetFilename.getCombo().getShell(), SWT.OPEN);
-			    dialog.setFilterPath("c:\\"); 
 				String path = dialog.open();
 				spreadsheetFolder.setText(path);
 			}
@@ -84,7 +83,6 @@ public class SpreadsheetDataSourceHelper { //extends Composite {
 			@Override
 			public void widgetDefaultSelected(SelectionEvent arg0) {
 				DirectoryDialog dialog = new DirectoryDialog(spreadsheetFilename.getCombo().getShell());
-			    //dialog.setFilterPath("c:\\"); 
 				String path = dialog.open();
 				spreadsheetFolder.setText(path);
 			}
