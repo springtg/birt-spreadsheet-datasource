@@ -1,0 +1,1 @@
+ODA Datasource plugin that enables BIRT to read data from Excel (97-2011) and Open Office files. The plugin works with BIRT 2.5 - 3.7.1
